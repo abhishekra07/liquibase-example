@@ -30,10 +30,6 @@ CREATE TABLE comments (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
---rollback
-
-DROP TABLE users;
-
-DROP TABLE posts;
-
-DROP TABLE comments;
+--rollback DROP TABLE comments;
+--rollback DROP TABLE posts;
+--rollback DROP TABLE users;

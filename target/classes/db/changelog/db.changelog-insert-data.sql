@@ -19,13 +19,8 @@ INSERT INTO comments (post_id, user_id, content) VALUES
 (1, 3, 'Interesting thoughts!'),
 (3, 1, 'Nice one, Alice! Keep it up.');
 
---rollback
+--rollback DELETE FROM comments WHERE post_id IN (1, 3);
 
--- Remove the data inserted into `comments`
-DELETE FROM comments WHERE post_id IN (1, 3);
+-- rollback DELETE FROM posts WHERE user_id IN (1, 2);
 
--- Remove the data inserted into `posts`
-DELETE FROM posts WHERE user_id IN (1, 2);
-
--- Remove the data inserted into `users`
-DELETE FROM users WHERE username IN ('alice', 'bob', 'charlie');
+-- rollback DELETE FROM users WHERE username IN ('alice', 'bob', 'charlie');
